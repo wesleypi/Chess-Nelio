@@ -5,16 +5,18 @@
  */
 package chessgame.application;
 
-import chessgame.gameboard.Position;
+import chessgame.board.Position;
+import chessgame.chess.ChessMatch;
+import chessgame.chess.ChessPiece;
 
 /**
  *
  * @author WesleyPI
  */
+
 public class App {
     public static void main(String[] args) {
-        Position posTest = new Position (12,4);
-        
-        System.out.println(posTest);
+        ChessMatch chessMatch = new ChessMatch();
+        UI.printBoard(chessMatch.getPieces());
     }
 }

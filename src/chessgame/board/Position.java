@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package chessgame.gameboard;
+package chessgame.board;
 
 /**
  *
  * @author WesleyPI
  */
+
 public class Position {
     private int row, column;
     
@@ -26,24 +27,10 @@ public class Position {
     }
 
     /**
-     * @param row the row to set
-     */
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    /**
      * @return the column
      */
     public int getColumn() {
         return column;
-    }
-
-    /**
-     * @param column the column to set
-     */
-    public void setColumn(int column) {
-        this.column = column;
     }
     
     @Override

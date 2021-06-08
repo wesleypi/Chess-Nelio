@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package chessgame.gameboard;
+package chessgame.board;
 
 /**
  *
- * @author WesleyPI
+ * @author WesleyPIs
  */
-class Board {
+public class Board {
     private int rows, columns;
     private Piece[][] pieces;
     
@@ -27,23 +27,15 @@ class Board {
     }
 
     /**
-     * @param rows the rows to set
-     */
-    public void setRows(int rows) {
-        this.rows = rows;
-    }
-
-    /**
      * @return the columns
      */
     public int getColumns() {
         return columns;
     }
-
-    /**
-     * @param columns the columns to set
-     */
-    public void setColumns(int columns) {
-        this.columns = columns;
+    public Piece piece(int row, int column){
+        return pieces[row][column];
+    }
+    public Piece piece(Position position){
+        return pieces[position.getRow()][position.getColumn()];
     }
 }
