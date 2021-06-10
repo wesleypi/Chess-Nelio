@@ -5,9 +5,7 @@
  */
 package chessgame.application;
 
-import chessgame.board.Position;
 import chessgame.chess.ChessMatch;
-import chessgame.chess.ChessPiece;
 
 /**
  *

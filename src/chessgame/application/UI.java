@@ -11,7 +11,7 @@ public class UI {
             }
             System.out.println();
         }
-        System.out.print("  A B C D E F G h");
+        System.out.println("  A B C D E F G H ");
     }
     public static void printPiece(ChessPiece chessPiece) {
         if (chessPiece == null){
