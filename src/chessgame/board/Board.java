@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package chessgame.board;
-
 
 /**
  *
@@ -23,16 +17,10 @@ public class Board {
         pieces = new Piece[rows][columns];
     }
 
-    /**
-     * @return the rows
-     */
     public int getRows() {
         return rows;
     }
 
-    /**
-     * @return the columns
-     */
     public int getColumns() {
         return columns;
     }
@@ -48,7 +36,6 @@ public class Board {
         }
         return pieces[position.getRow()][position.getColumn()];
     }
-    
     
     public void placePiece(Piece piece, Position position){
         if(thereIsAPiece(position)){

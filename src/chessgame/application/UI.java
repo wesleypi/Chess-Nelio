@@ -43,7 +43,6 @@ public class UI {
         } catch (RuntimeException e) {
             throw new InputMismatchException("Error reading ChessPosition. valid values are from A1 to H8");
         }
-
     }
 
     public static void printBoard(ChessPiece[][] chessPieces) {

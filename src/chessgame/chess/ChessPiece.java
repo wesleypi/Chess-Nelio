@@ -3,7 +3,7 @@ package chessgame.chess;
 import chessgame.board.*;
 
 public class ChessPiece extends Piece {
-    private Color color;
+    private final Color color;
     
     public ChessPiece (Board board, Color color){
         super (board);
@@ -13,6 +13,4 @@ public class ChessPiece extends Piece {
     public Color getColor() {
         return color;
     }
-    
 }
-
