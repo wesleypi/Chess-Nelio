@@ -6,6 +6,9 @@
 package chessgame.application;
 
 import chessgame.chess.ChessMatch;
+import chessgame.chess.ChessPiece;
+import chessgame.chess.ChessPosition;
+import java.util.Scanner;
 
 /**
  *
@@ -14,7 +17,20 @@ import chessgame.chess.ChessMatch;
 
 public class App {
     public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
         ChessMatch chessMatch = new ChessMatch();
-        UI.printBoard(chessMatch.getPieces());
+        while(true){
+            UI.clearScreen();
+            UI.printBoard(chessMatch.getPieces());
+            
+            System.out.println("\nSource: ");
+            ChessPosition source = UI.readChessPosition(scan);
+            
+            System.out.println("\nTarget: ");
+            ChessPosition target = UI.readChessPosition(scan);
+            
+            ChessPiece capturedPiece = chessMatch.peformChessMove(source, target);
+        }
+        
     }
 }
