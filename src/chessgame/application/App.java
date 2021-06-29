@@ -31,6 +31,7 @@ public class App {
                 System.out.println("\nTarget: ");
                 ChessPosition target = UI.readChessPosition(scan);
 
+                
                 ChessPiece capturedPiece = chessMatch.peformChessMove(source, target);
             } catch (ChessException | InputMismatchException e) {
                 System.out.println(e.getMessage());
