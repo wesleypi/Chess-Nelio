@@ -11,28 +11,31 @@ import java.util.Scanner;
  *
  * @author WesleyPI
  */
-
 public class App {
+
     public static void main(String[] args) {
-        Scanner scan = new Scanner (System.in);
+        Scanner scan = new Scanner(System.in);
         ChessMatch chessMatch = new ChessMatch();
-        while(true){
-            try{
+        while (true) {
+            try {
                 UI.clearScreen();
                 UI.printBoard(chessMatch.getPieces());
-            
+
                 System.out.println("\nSource: ");
                 ChessPosition source = UI.readChessPosition(scan);
-            
-            System.out.println("\nTarget: ");
-            ChessPosition target = UI.readChessPosition(scan);
-            
-            ChessPiece capturedPiece = chessMatch.peformChessMove(source, target);
-            }
-            catch(ChessException | InputMismatchException e){
-                System.out.println(e.getMessage());   
+                boolean[][] possibleMoves = chessMatch.possibleMoves(source);
+                
+                UI.clearScreen();
+                UI.printBoard(chessMatch.getPieces(), possibleMoves);
+
+                System.out.println("\nTarget: ");
+                ChessPosition target = UI.readChessPosition(scan);
+
+                ChessPiece capturedPiece = chessMatch.peformChessMove(source, target);
+            } catch (ChessException | InputMismatchException e) {
+                System.out.println(e.getMessage());
                 scan.nextLine();
             }
-        }    
+        }
     }
 }
