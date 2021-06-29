@@ -1,10 +1,10 @@
 package chessgame.chess;
 
-import chessgame.board.Board;
-import chessgame.board.Piece;
-import chessgame.board.Position;
-import chessgame.chess.chesspieces.King;
-import chessgame.chess.chesspieces.Rook;
+import game.board.Board;
+import game.board.Piece;
+import game.board.Position;
+import chessgame.chesspieces.King;
+import chessgame.chesspieces.Rook;
 
 public class ChessMatch{
     private final Board board;
@@ -51,6 +51,10 @@ public class ChessMatch{
         if (!board.thereIsAPiece(position)){
             throw new ChessException("There is no piece on source position");
         }
+        if (!board.piece(position).isThereAnyPossibleMove()){
+            throw new ChessException("There is no possible moves for the chosen piece");
+        }
+        
     }
 
     private Piece makeMove(Position source, Position target) {

@@ -1,4 +1,4 @@
-package chessgame.board;
+package game.board;
 
 /**
  *
@@ -27,6 +27,11 @@ public class Position {
     }
     
     public void setColumn(int column){
+        this.column = column;
+    }
+    
+    public void setRowColumn(int row, int column){
+        this.row = row;
         this.column = column;
     }
     

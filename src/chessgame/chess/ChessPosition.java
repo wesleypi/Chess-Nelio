@@ -1,6 +1,6 @@
 package chessgame.chess;
 
-import chessgame.board.Position;
+import game.board.Position;
 
 /**
  *

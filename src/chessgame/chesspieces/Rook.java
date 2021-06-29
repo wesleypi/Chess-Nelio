@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package chessgame.chess.chesspieces;
+package chessgame.chesspieces;
 
-import chessgame.board.Board;
+import game.board.Board;
 import chessgame.chess.ChessPiece;
 import chessgame.chess.Color;
 
@@ -13,14 +13,20 @@ import chessgame.chess.Color;
  *
  * @author WesleyPI
  */
-public class King extends ChessPiece{
+public class Rook extends ChessPiece{
     
-    public King(Board board, Color color) {
+    public Rook(Board board, Color color) {
         super(board, color);
     }
     
     @Override
     public String toString(){
-        return "K";
+        return "R";
+    }
+
+    @Override
+    public boolean[][] possibleMoves() {
+       boolean[][] mat = new boolean [getBoard().getRows()][getBoard().getColumns()];
+       return mat;
     }
 }

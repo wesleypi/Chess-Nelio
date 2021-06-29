@@ -1,6 +1,6 @@
 package chessgame.chess;
 
-import chessgame.board.BoardException;
+import game.board.BoardException;
 
 /**
  *

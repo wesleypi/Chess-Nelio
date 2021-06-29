@@ -1,4 +1,4 @@
-package chessgame.board;
+package game.board;
 
 /**
  *
